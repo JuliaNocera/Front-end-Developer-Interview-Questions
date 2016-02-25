@@ -25,6 +25,9 @@ This file contains a number of front-end interview questions that can be used wh
 #### General Questions:
 
 * What did you learn yesterday/this week?
+  * Meteor & React 
+    * Meteor: working in the .isClient & .isServer and what should go outside of both (ex. mongo instance) || how the miniMongo works on client side _Frontend Masters on Meteor_
+    * React: drilled in on Props vs. State and how to display data from Reddit api call with user input for topic _Real-World-React Meetup_
 * What excites or interests you about coding?
 * What is a recent technical challenge you experienced and how did you solve it?
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
@@ -49,6 +52,7 @@ This file contains a number of front-end interview questions that can be used wh
 #### HTML Questions:
 
 * What does a `doctype` do?
+  * It is a Document Type Definition (DTD), which means it lets the browser know what rules to use to correctly render it the content to the page depending on the markup language declared
 * What's the difference between standards mode and quirks mode?
 * What's the difference between HTML and XHTML?
 * Are there any problems with serving pages as `application/xhtml+xml`?
@@ -65,6 +69,9 @@ This file contains a number of front-end interview questions that can be used wh
 #### CSS Questions:
 
 * What is the difference between classes and ID's in CSS?
+  * Both are _hooks_ in an HTML file to allow the programmer to stylize and interact (think jQuery here) with the elements identified
+    * Id: _Unique_ --> Only one ID per element and only one of the ID instances on the page (note: this is extremely important for things like jQuery : getElementById for example won't work if there are multiple instances of one ID)
+    * Class = _Not-Unique_ --> Multiple classes per element and classes can be used again and again on multiple elements on the page 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 * Describe Floats and how they work.
 * Describe z-index and how stacking context is formed.
@@ -101,6 +108,23 @@ This file contains a number of front-end interview questions that can be used wh
 #### JS Questions:
 
 * Explain event delegation
+  * Allows you to avoid adding event listeners to specific nodes
+    * Event listener is added to one parent & that event listener analyzes bubbled events to find a match on child elements so you can use e.target to check the event object's target property and find the child element the event comes from 
+  *EX :  
+
+```javascript
+// Get the element, add a click listener...
+document.getElementById("parent-list").addEventListener("click", function(e) {
+  // e.target is the clicked element!
+  // If it was a list item
+  if(e.target && e.target.nodeName == "LI") {
+    // List item found!  Output the ID!
+    console.log("List item ", e.target.id.replace("post-"), " was clicked!");
+  }
+});
+
+//from : https://davidwalsh.name/event-delegate
+```
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
@@ -183,6 +207,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 *Question: What is the value of `foo`?*
 ```javascript
 var foo = 10 + '20';
+// (Answer) foo = 1020; 
 ```
 
 *Question: How would you make this work?*
