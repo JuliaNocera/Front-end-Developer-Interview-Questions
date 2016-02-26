@@ -29,6 +29,9 @@ This file contains a number of front-end interview questions that can be used wh
     * Meteor: working in the .isClient & .isServer and what should go outside of both (ex. mongo instance) || how the miniMongo works on client side _Frontend Masters on Meteor_
     * React: drilled in on Props vs. State and how to display data from Reddit api call with user input for topic _Real-World-React Meetup_
 * What excites or interests you about coding?
+  * The most excting thing to me is the absolute endlessness of what you can create and achieve and how fast new technologies are made which move us closer to achieving the infinite possiblities. 
+    * Open source is one area that is also very exciting. The simple fact that so much code is shared for free with the community means that we have the most minds possible solving problems and making tools and products better. 
+  * Part of all of this means that in this field of coding we, as software engineers, will always be challenged to expand our knowledge and learn new things and that is neverending. 
 * What is a recent technical challenge you experienced and how did you solve it?
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
 * Talk about your preferred development environment.
@@ -54,6 +57,11 @@ This file contains a number of front-end interview questions that can be used wh
 * What does a `doctype` do?
   * It is a Document Type Definition (DTD), which means it lets the browser know what rules to use to correctly render it the content to the page depending on the markup language declared
 * What's the difference between standards mode and quirks mode?
+  * __Quirks mode:__ layout emulates nonstandard behavior in Navigator 4 and Internet Explorer 5  -->  supports websites built before widespread adoption of web standards
+  * __Standards mode:__
+    * almost standards mode: only a small number of quirks implemented
+    * full standards mode: behavior described by HTML and CSS specifications
+  * Note: the `DOCTYPE html` tag at the beginning of your html file indicates that the browser should run in _full standards mode_
 * What's the difference between HTML and XHTML?
 * Are there any problems with serving pages as `application/xhtml+xml`?
 * How do you serve a page with content in multiple languages?
@@ -98,6 +106,7 @@ This file contains a number of front-end interview questions that can be used wh
 * List as many values for the display property that you can remember.
 * What's the difference between inline and inline-block?
 * What's the difference between a relative, fixed, absolute and statically positioned element?
+  * If you have an element (divB) inside of another element (divA) and you assign position: absolute to the outer div (divA) and position: relative to the inner div (divB), then all calulations for sizing and positioning of the divB will be calculated based on the outer divA. Example file on my machine at : `Desktop/Code/CSS_Examples/absolute_relative_positioning/index.html`
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
 * Have you played around with the new CSS Flexbox or Grid specs?
